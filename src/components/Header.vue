@@ -1,7 +1,10 @@
 <template>
   <v-toolbar dark color="primary">
-    <v-toolbar-side-icon @click="setSideBar(!sideBar)"></v-toolbar-side-icon>   
-    <v-toolbar-title class="white--text">Menu Vue</v-toolbar-title>
+    <v-toolbar-side-icon v-on:click="setSideBar(!sideBar)"></v-toolbar-side-icon> 
+     <v-btn v-if="!isHome" icon @click="$router.go(-1)">
+        <v-icon>arrow_back</v-icon>
+    </v-btn>
+    <v-toolbar-title class="white--text">{{ appName }}</v-toolbar-title>
     <v-spacer></v-spacer>
     <v-btn icon>
       <v-badge left overlap color="orange">
@@ -38,6 +41,9 @@ export default {
     ...mapGetters({
       sideBar   : 'sideBar',
     }),
+    isHome () {
+      return (this.$route.path==='/')
+    },
   }
 }
 </script>

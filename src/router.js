@@ -19,6 +19,26 @@ export default new Router({
       name: 'about',
       component: About
     },
+    {
+      path: '/categories',
+      name: 'categories',
+      component: () => import('./views/Categories.vue')
+    },
+    {
+      path: '/books',
+      name: 'books',
+      component: () => import('./views/Books.vue')
+    },
+    {
+      path: '/category/:slug',
+      name: 'category',
+      component: () => import('./views/Category.vue')
+    },
+     {
+      path: '/book/:slug',
+      name: 'book',
+      component: () => import('./views/Book.vue')
+    },
     { 
       path: '*', 
       redirect: { 
