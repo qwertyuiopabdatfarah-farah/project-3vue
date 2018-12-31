@@ -47,14 +47,14 @@ import { mapActions } from 'vuex'
     },
     methods: {
       ...mapActions({
-          addCart  : 'cart/add',
+          addCart  :  'cart/insert',
           setAlert  : 'alert/set',
       }),
       buy(){
         this.addCart(this.book)
         this.setAlert({
             status : true,
-            text  : 'Added to cart',
+            text  : 'Succesfully to cart',
             type  : 'success',
         })
       }
