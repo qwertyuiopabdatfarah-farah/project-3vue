@@ -94,8 +94,8 @@ export default {
     data: () => ({
       items: [
           { title: 'Home', icon: 'dashboard', route: 'home' },
-         // { title: 'Profile', icon: 'person', route: 'profile', auth: true },
-          //{ title: 'My Order', icon: 'shop_two', route: 'my-order', auth: true },
+          { title: 'Profile', icon: 'person', route: 'profile', auth: true },
+          { title: 'My Order', icon: 'shop_two', route: 'my-order', auth: true },
           { title: 'About', icon: 'question_answer', route: 'about' },      
       ]
     }),
